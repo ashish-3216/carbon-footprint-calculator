@@ -1,3 +1,51 @@
+import React, { useState, useEffect } from 'react';
+import ReactDOM from 'react-dom';
+import './styles.css';
+
+function App() {
+  const [darkMode, setDarkMode] = useState(false);
+
+  useEffect(() => {
+    const savedMode = localStorage.getItem('darkMode') === 'true';
+    setDarkMode(savedMode);
+  }, []);
+
+  useEffect(() => {
+    if (darkMode) {
+      document.body.classList.add('dark-mode');
+    } else {
+      document.body.classList.remove('dark-mode');
+    }
+    localStorage.setItem('darkMode', darkMode);
+  }, [darkMode]);
+
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode);
+  };
+
+  return (
+    <div className="app">
+      <header>
+        <h1>Carbon Footprint Calculator</h1>
+        <button onClick={toggleDarkMode} className="dark-mode-toggle">
+          {darkMode ? 'Light Mode' : 'Dark Mode'}
+        </button>
+      </header>
+      {/* The rest of your existing content goes here */}
+      <form id="carbonForm">
+        {/* Form elements */}
+      </form>
+      <div id="carbonResults" className="hidden">
+        <p id="carbonFootprint"></p>
+        <div id="recommendations"></div>
+      </div>
+      <div id="articles"></div>
+    </div>
+  );
+}
+
+ReactDOM.render(<App />, document.getElementById('root'));
+
 document.addEventListener('DOMContentLoaded', function() {
     const carbonForm = document.getElementById('carbonForm');
     carbonForm.addEventListener('submit', function(event) {
