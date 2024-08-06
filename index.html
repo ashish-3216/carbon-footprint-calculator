@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carbon Footprint Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav style="position: fixed ;top: 0px; width: 100%;;">
+        <ul style="display: flex; justify-content: space-around; margin-left: 20px;margin-right: 20px;">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="About team.html">About Us</a></li>
+            <li><a href="Resources.html">Resources</a></li>
+            <li><a href="PreviousRecord.html">PreviousRecord</a></li>
+        </ul>
+    </nav>
+    <div class="container" style="margin-top: 30px;">
+    <h1>Carbon Footprint Tracker</h1>
+        
+
+        <form id="carbon-footprint-form">
+            <fieldset>
+                <legend>Fuel Consumption</legend>
+                <label for="fuel-type">Fuel Type:</label>
+                <select id="fuel-type">
+                    <option value="coal-anthracite">Anthracite</option>
+                    <option value="coal-bituminous">Bituminous</option>
+                    <option value="coal-sub-bituminous">Sub-bituminous</option>
+                    <option value="coal-lignite">Lignite</option>
+                    <option value="coal-mixed-commercial">Mixed (Commercial Sector)</option>
+                    <option value="coal-mixed-electric">Mixed (Electric Power Sector)</option>
+                    <option value="coal-mixed-industrial-coking">Mixed (Industrial Coking)</option>
+                    <option value="coal-mixed-industrial">Mixed (Industrial Sector)</option>
+                    <option value="coal-coke">Coal Coke</option>
+                </select>
+
+                <label for="fuel-amount">Amount (mmBtu):</label>
+                <input type="number" id="fuel-amount" step="any">
+            </fieldset>
+
+            <fieldset  style="margin-top: 30px;">
+                <legend>Mobile Combustion</legend>
+                <label for="mobile-fuel-type">Fuel Type:</label>
+                <select id="mobile-fuel-type">
+                    <option value="aviation-gasoline">Aviation Gasoline</option>
+                    <option value="biodiesel">Biodiesel (100%)</option>
+                    <option value="cng">Compressed Natural Gas (CNG)</option>
+                    <option value="diesel-fuel">Diesel Fuel</option>
+                    <option value="ethanol">Ethanol (100%)</option>
+                    <option value="kerosene-jet">Kerosene-Type Jet Fuel</option>
+                    <option value="lng">Liquefied Natural Gas (LNG)</option>
+                    <option value="lpg">Liquefied Petroleum Gases (LPG)</option>
+                    <option value="motor-gasoline">Motor Gasoline</option>
+                    <option value="residual-fuel-oil">Residual Fuel Oil</option>
+                </select>
+
+                <label for="mobile-fuel-amount">Amount:</label>
+                <input type="number" id="mobile-fuel-amount" step="any">
+            </fieldset>
+
+            <fieldset style="margin-top: 30px;">
+                <legend>Electricity Consumption</legend>
+                <label for="egrid-subregion">eGRID Subregion:</label>
+                <select id="egrid-subregion">
+                    <option value="ASCC-Alaska">ASCC Alaska Grid</option>
+                    <option value="ASCC-Miscellaneous">ASCC Miscellaneous</option>
+                    <option value="WECC-Southwest">WECC Southwest</option>
+                    <option value="WECC-California">WECC California</option>
+                    <option value="ERCOT-All">ERCOT All</option>
+                    <option value="FRCC-All">FRCC All</option>
+                    <option value="HICC-Miscellaneous">HICC Miscellaneous</option>
+                    <option value="HICC-Oahu">HICC Oahu</option>
+                    <option value="MRO-East">MRO East</option>
+                    <option value="MRO-West">MRO West</option>
+                    <option value="NPCC-New-England">NPCC New England</option>
+                    <option value="WECC-Northwest">WECC Northwest</option>
+                    <option value="NPCC-NYC-Westchester">NPCC NYC/Westchester</option>
+                    <option value="NPCC-Long-Island">NPCC Long Island</option>
+                    <option value="NPCC-Upstate-NY">NPCC Upstate NY</option>
+                    <option value="Puerto-Rico-Miscellaneous">Puerto Rico Miscellaneous</option>
+                    <option value="RFC-East">RFC East</option>
+                    <option value="RFC-Michigan">RFC Michigan</option>
+                    <option value="RFC-West">RFC West</option>
+                    <option value="WECC-Rockies">WECC Rockies</option>
+                    <option value="SPP-North">SPP North</option>
+                    <option value="SPP-South">SPP South</option>
+                    <option value="SERC-Mississippi-Valley">SERC Mississippi Valley</option>
+                    <option value="SERC-Midwest">SERC Midwest</option>
+                    <option value="SERC-South">SERC South</option>
+                    <option value="SERC-Tennessee-Valley">SERC Tennessee Valley</option>
+                    <option value="SERC-Virginia-Carolina">SERC Virginia/Carolina</option>
+                    <option value="US-Average">US Average</option>
+                </select>
+
+                <label for="electricity-amount">Amount (MWh):</label>
+                <input type="number" id="electricity-amount" step="any">
+            </fieldset>
+
+            <fieldset style="margin-top: 30px;">
+                <legend>Transportation</legend>
+                <label for="vehicle-type">Vehicle Type:</label>
+                <select id="vehicle-type">
+                    <option value="medium-heavy-truck">Medium- and Heavy-Duty Truck</option>
+                    <option value="passenger-car">Passenger Car A</option>
+                    <option value="light-duty-truck">Light-Duty Truck B</option>
+                    <option value="medium-heavy-truck-c">Medium- and Heavy-Duty Truck C</option>
+                    <option value="rail">Rail</option>
+                    <option value="waterborne-craft">Waterborne Craft</option>
+                    <option value="aircraft">Aircraft</option>
+                </select>
+
+                <label for="vehicle-distance">Distance (vehicle-mile or short ton-mile):</label>
+                <input type="number" id="vehicle-distance" step="any">
+            </fieldset>
+
+            <fieldset style="margin-top: 30px;">
+                <legend>Waste Material</legend>
+                <label for="material-type">Material Type:</label>
+                <select id="material-type">
+                    <option value="aluminum-cans">Aluminum Cans</option>
+                    <option value="aluminum-ingot">Aluminum Ingot</option>
+                    <option value="steel-cans">Steel Cans</option>
+                    <option value="copper-wire">Copper Wire</option>
+                    <option value="glass">Glass</option>
+                    <option value="hdpe">HDPE</option>
+                    <option value="ldpe">LDPE</option>
+                    <option value="pet">PET</option>
+                    <option value="lldpe">LLDPE</option>
+                    <option value="pp">PP</option>
+                    <option value="ps">PS</option>
+                    <option value="pvc">PVC</option>
+                    <option value="pla">PLA</option>
+                    <option value="corrugated-containers">Corrugated Containers</option>
+                </select>
+
+                <label for="material-amount">Amount (short ton):</label>
+                <input type="number" id="material-amount" step="any">
+            </fieldset>
+
+            <fieldset style="margin-top: 30px;">
+                <legend>Business Travel</legend>
+                <label for="travel-type">Travel Type:</label>
+                <select id="travel-type">
+                    <option value="passenger-car">Passenger Car A</option>
+                    <option value="light-duty-truck">Light-Duty Truck B</option>
+                    <option value="motorcycle">Motorcycle</option>
+                    <option value="intercity-rail-northeast">Intercity Rail - Northeast Corridor C</option>
+                    <option value="intercity-rail-other">Intercity Rail - Other Routes C</option>
+                    <option value="intercity-rail-national">Intercity Rail - National Average C</option>
+                    <option value="commuter-rail">Commuter Rail D</option>
+                    <option value="transit-rail">Transit Rail (i.e., Subway, Tram) E</option>
+                    <option value="bus">Bus</option>
+                    <option value="air-travel-short-haul">Air Travel - Short Haul (&lt; 300 miles)</option>
+                    <option value="air-travel-medium-haul">Air Travel - Medium Haul (&gt;= 300 miles, &lt; 2300 miles)</option>
+                    <option value="air-travel-long-haul">Air Travel - Long Haul (&gt;= 2300 miles)</option>
+                </select>
+
+                <label for="travel-distance">Distance (miles):</label>
+                <input type="number" id="travel-distance" step="any">
+            </fieldset>
+
+            <button style="margin-top: 20px;display: flex; justify-content: flex-end; justify-items: flex-end;" type="button" onclick="calculateCarbonFootprint()">Calculate Footprint</button>
+        </form>
+
+        <div id="result"></div>
+        <div id="previous-footprint"></div>
+        <section>
+            <h2>Personalized Tips</h2>
+            <div id="personalized-tips"></div>
+        </section>
+
+        
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

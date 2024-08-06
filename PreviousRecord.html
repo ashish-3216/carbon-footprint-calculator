@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Previous Records</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav style="position: fixed ;top: 0px; width: 100%;">
+        <ul style="display: flex; justify-content: space-around; margin-left: 20px;margin-right: 20px;">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="About team.html">About Us</a></li>
+            <li><a href="Resources.html">Resources</a></li>
+            <li><a href="PreviousRecord.html">Previous Records</a></li>
+        </ul>
+    </nav>
+    <h1 style="margin-top: 60px;" >Previous Carbon Footprint Records</h1>
+
+    <div class="container">
+        <h2>Your Records</h2>
+        <button id="clear-records-button">Clear Records</button> <!-- Added button -->
+        <table id="records-table">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Fuel Consumption</th>
+                    <th>Mobile Combustion</th>
+                    <th>Electricity Consumption</th>
+                    <th>Transportation</th>
+                    <th>Waste Material</th>
+                    <th>Business Travel</th>
+                    <th>Total Carbon Footprint (kg CO2)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Records will be dynamically inserted here -->
+            </tbody>
+        </table>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
